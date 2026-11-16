@@ -49,7 +49,7 @@
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            object-position: center top; /* برای اینکه سر و صورت در قاب بریده نشود */
+            object-position: center top;
             border: 2px solid var(--card-bg);
             background-color: #334155;
         }
@@ -133,47 +133,44 @@
 <body>
 
 <div class="container">
-    <!-- بخش پروفایل -->
     <div class="header">
         <div class="avatar-wrapper">
             <img
-                src="avatar.jpg"
-                alt="Vista Kaviani"
-                class="avatar"
-                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Vista+Kaviani&background=38bdf8&color=0f172a&size=256';"
-            >
+    src="IMG_20250222_090122_082.jpg"
+    alt="Vista Kaviani"
+    class="avatar"
+    onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Vista+Kaviani&background=38bdf8&color=0f172a&size=256';"
+>
         </div>
         <h1>Vista Kaviani</h1>
         <div class="role">AI Solutions Developer & Data Strategist</div>
         <p class="bio">Building Multi-Agent AI Systems, Computer Vision & B2B Automation Solutions.</p>
     </div>
 
-    <!-- دکمه ذخیره مستقیم شماره تماس در گوشی مخاطب -->
     <button class="btn-primary" onclick="downloadVCard()">+ Save Contact (ذخیره شماره تماس)</button>
 
-    <!-- دکمه‌های ارتباطی سریع -->
     <div class="social-grid">
-        <a href="https://linkedin.com/in/YOUR_ID" target="_blank" class="social-btn">LinkedIn</a>
-        <a href="https://wa.me/YOUR_NUMBER" target="_blank" class="social-btn">WhatsApp</a>
-        <a href="mailto:YOUR_EMAIL@gmail.com" class="social-btn">Email</a>
+        <a href="https://linkedin.com/in/vista-kaviani" target="_blank" class="social-btn">LinkedIn</a>
+        <a href="https://wa.me/+96891278434" target="_blank" class="social-btn">WhatsApp</a>
+        <a href="mailto:vistakavianii@gmail.com" class="social-btn">Email</a>
     </div>
 
-    <!-- بخش پرتفوی -->
     <div class="section-title">Featured Portfolio & Projects</div>
 
-    <a href="https://github.com/YOUR_USERNAME" target="_blank" class="project-card">
+    <a href="https://github.com/vk7496 "
+     target="_blank" class="project-card">
         <div class="project-title"><span>AI Trade Matchmaking Platform</span><span>↗</span></div>
         <div class="project-desc">Multi-agent LLM workflow & automated B2B lead enrichment system.</div>
         <span class="tag">Multi-Agent AI</span> <span class="tag">Python / RAG</span>
     </a>
 
-    <a href="https://github.com/YOUR_USERNAME" target="_blank" class="project-card">
+    <a href="https://github.com/vk7496" target="_blank" class="project-card">
         <div class="project-title"><span>NeuroEarly Diagnostic AI</span><span>↗</span></div>
         <div class="project-desc">Local edge AI system for EEG signal processing & explainable diagnostics.</div>
         <span class="tag">Healthcare AI</span> <span class="tag">Signal Processing</span>
     </a>
 
-    <a href="https://github.com/YOUR_USERNAME" target="_blank" class="project-card">
+    <a href="https://github.com/vk7496" target="_blank" class="project-card">
         <div class="project-title"><span>PropTech & Hospitality AI</span><span>↗</span></div>
         <div class="project-desc">Computer vision interior rendering & automated guest reservation agents.</div>
         <span class="tag">Computer Vision</span> <span class="tag">Streamlit</span>
