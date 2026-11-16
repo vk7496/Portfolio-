@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Kaviani | AI Solutions & Data Strategist</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0284c7;
+            --border: #334155;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            padding: 20px 15px;
+            line-height: 1.6;
+        }
+        .container {
+            width: 100%;
+            max-width: 460px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 28px 22px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+        .header { text-align: center; margin-bottom: 24px; }
+        .avatar-wrapper {
+            width: 104px;
+            height: 104px;
+            margin: 0 auto 14px auto;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(135deg, var(--accent), #818cf8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top; /* برای اینکه سر و صورت در قاب بریده نشود */
+            border: 2px solid var(--card-bg);
+            background-color: #334155;
+        }
+        h1 { font-size: 1.45rem; font-weight: 700; letter-spacing: -0.3px; }
+        .role { color: var(--accent); font-size: 0.92rem; font-weight: 500; margin-top: 4px; }
+        .bio { color: var(--text-muted); font-size: 0.88rem; margin-top: 10px; }
+
+        .btn-primary {
+            display: block;
+            width: 100%;
+            background: var(--accent);
+            color: #0f172a;
+            text-align: center;
+            padding: 13px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-bottom: 16px;
+        }
+        .btn-primary:hover { background: var(--accent-hover); color: #fff; }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 26px;
+        }
+        .social-btn {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            text-decoration: none;
+            text-align: center;
+            padding: 10px 6px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .social-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+        .section-title {
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 6px;
+        }
+        .project-card {
+            background: rgba(15, 23, 42, 0.55);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 12px;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+            transition: 0.2s;
+        }
+        .project-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .project-title { font-weight: 600; font-size: 0.96rem; color: var(--text-main); display: flex; justify-content: space-between; }
+        .project-desc { font-size: 0.83rem; color: var(--text-muted); margin-top: 4px; }
+        .tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent);
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+        .footer { text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- بخش پروفایل -->
+    <div class="header">
+        <div class="avatar-wrapper">
+            <img
+                src="avatar.jpg"
+                alt="Vista Kaviani"
+                class="avatar"
+                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Vista+Kaviani&background=38bdf8&color=0f172a&size=256';"
+            >
+        </div>
+        <h1>Vista Kaviani</h1>
+        <div class="role">AI Solutions Developer & Data Strategist</div>
+        <p class="bio">Building Multi-Agent AI Systems, Computer Vision & B2B Automation Solutions.</p>
+    </div>
+
+    <!-- دکمه ذخیره مستقیم شماره تماس در گوشی مخاطب -->
+    <button class="btn-primary" onclick="downloadVCard()">+ Save Contact (ذخیره شماره تماس)</button>
+
+    <!-- دکمه‌های ارتباطی سریع -->
+    <div class="social-grid">
+        <a href="https://linkedin.com/in/YOUR_ID" target="_blank" class="social-btn">LinkedIn</a>
+        <a href="https://wa.me/YOUR_NUMBER" target="_blank" class="social-btn">WhatsApp</a>
+        <a href="mailto:YOUR_EMAIL@gmail.com" class="social-btn">Email</a>
+    </div>
+
+    <!-- بخش پرتفوی -->
+    <div class="section-title">Featured Portfolio & Projects</div>
+
+    <a href="https://github.com/YOUR_USERNAME" target="_blank" class="project-card">
+        <div class="project-title"><span>AI Trade Matchmaking Platform</span><span>↗</span></div>
+        <div class="project-desc">Multi-agent LLM workflow & automated B2B lead enrichment system.</div>
+        <span class="tag">Multi-Agent AI</span> <span class="tag">Python / RAG</span>
+    </a>
+
+    <a href="https://github.com/YOUR_USERNAME" target="_blank" class="project-card">
+        <div class="project-title"><span>NeuroEarly Diagnostic AI</span><span>↗</span></div>
+        <div class="project-desc">Local edge AI system for EEG signal processing & explainable diagnostics.</div>
+        <span class="tag">Healthcare AI</span> <span class="tag">Signal Processing</span>
+    </a>
+
+    <a href="https://github.com/YOUR_USERNAME" target="_blank" class="project-card">
+        <div class="project-title"><span>PropTech & Hospitality AI</span><span>↗</span></div>
+        <div class="project-desc">Computer vision interior rendering & automated guest reservation agents.</div>
+        <span class="tag">Computer Vision</span> <span class="tag">Streamlit</span>
+    </a>
+
+    <div class="footer">Scan to view latest portfolio • Updated dynamically</div>
+</div>
+
+<script>
+    function downloadVCard() {
+        const vcard = [
+            "BEGIN:VCARD",
+            "VERSION:3.0",
+            "N:Kaviani;Vista;;;",
+            "FN:Vista Kaviani",
+            "TITLE:AI Solutions Developer & Data Strategist",
+            "TEL;TYPE=CELL:+968 91278434",
+            "EMAIL;TYPE=INTERNET:vistakavianii@gmail.com",
+            "URL:https://linkedin.com/in/vista-kaviani",
+            "END:VCARD"
+        ].join("\n");
+
+        const blob = new Blob([vcard], { type: "text/vcard" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "Vista_Kaviani.vcf";
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+</script>
+
+</body>
+</html>
